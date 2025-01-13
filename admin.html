@@ -11,6 +11,13 @@
       padding: 0;
       background: #f4f4f4;
       line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     header {
@@ -18,6 +25,28 @@
       color: white;
       padding: 20px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .exit-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .exit-button:hover {
+      background-color: #d90429;
     }
 
     .container {
@@ -60,6 +89,7 @@
 </head>
 <body>
   <header>
+    <button class="exit-button" onclick="window.location.href='index.html';">Exit</button>
     <h1>Admin Dashboard</h1>
     <p>Edit Your Portfolio</p>
   </header>
@@ -70,9 +100,30 @@
       <textarea id="education" rows="4">Lebanese American University - BS in Computer Science, 2021 – 2025</textarea>
 
       <label for="experience">Experience</label>
-      <textarea id="experience" rows="6">Netvariant, Semicolon Academy, Integrated Digital Systems</textarea>
+      <textarea id="experience" rows="6">
+Netvariant: Backend Software Engineer (05/21-06/21)
+Semicolon Academy: Cybersecurity Bootcamp (03/24-04/24)
+Integrated Digital Systems: Full Stack Web Development (05/24-07/24)
+      </textarea>
 
       <label for="projects">Projects</label>
-      <textarea id="projects" rows="6">Image Enhancement, LAU Medical Center App, Phishing Link Detection</textarea>
+      <textarea id="projects" rows="6">
+Image Enhancement Using Median and Sobel Filters
+LAU Medical Center App
+Phishing Link Detection
+Activity Club Website
+Fashion Marketplace
+      </textarea>
 
-      <button type="button" onclick="saveChanges()">Save Changes
+      <button type="button" onclick="saveChanges()">Save Changes</button>
+    </form>
+  </div>
+
+  <script>
+    function saveChanges() {
+      alert('Changes saved successfully!');
+      // You can extend this to store data in a backend or localStorage.
+    }
+  </script>
+</body>
+</html>
