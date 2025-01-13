@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    textarea, input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <p>Edit Your Portfolio</p>
+  </header>
+
+  <div class="container">
+    <form id="adminForm">
+      <label for="education">Education</label>
+      <textarea id="education" rows="4">Lebanese American University - BS in Computer Science, 2021 – 2025</textarea>
+
+      <label for="experience">Experience</label>
+      <textarea id="experience" rows="6">Netvariant, Semicolon Academy, Integrated Digital Systems</textarea>
+
+      <label for="projects">Projects</label>
+      <textarea id="projects" rows="6">Image Enhancement, LAU Medical Center App, Phishing Link Detection</textarea>
+
+      <button type="button" onclick="saveChanges()">Save Changes
