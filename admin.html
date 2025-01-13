@@ -65,7 +65,7 @@
       font-weight: bold;
     }
 
-    textarea, input[type="text"] {
+    textarea {
       width: 100%;
       padding: 10px;
       margin-bottom: 20px;
@@ -98,10 +98,7 @@
     <form id="adminForm">
       <!-- Education Section -->
       <label for="education">Education</label>
-      <textarea id="education" rows="6">
-Lebanese American University - BS in Computer Science, 2021 – 2025
-Specialization courses focused on algorithms, data structures, programming languages, software development, and computer systems.
-      </textarea>
+      <textarea id="education" rows="6">Lebanese American University - BS in Computer Science, 2021 – 2025</textarea>
 
       <!-- Experience Section -->
       <label for="experience">Experience</label>
@@ -141,11 +138,21 @@ Fashion Marketplace:
   </div>
 
   <script>
+    // Function to save data to localStorage
     function saveChanges() {
+      const education = document.getElementById('education').value;
+      const experience = document.getElementById('experience').value;
+      const projects = document.getElementById('projects').value;
+
+      // Save data to localStorage
+      localStorage.setItem('education', education);
+      localStorage.setItem('experience', experience);
+      localStorage.setItem('projects', projects);
+
       alert('Changes saved successfully!');
-      // In a real application, this is where you would store the updated data.
     }
   </script>
 </body>
 </html>
+
 
