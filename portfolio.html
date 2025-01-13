@@ -79,11 +79,63 @@
   </div>
 
   <script>
+    // Function to initialize localStorage with default data if it is empty
+    function initializeLocalStorage() {
+      if (!localStorage.getItem('education')) {
+        localStorage.setItem(
+          'education',
+          'Lebanese American University - BS in Computer Science, 2021 – 2025'
+        );
+      }
+
+      if (!localStorage.getItem('experience')) {
+        localStorage.setItem(
+          'experience',
+          `Netvariant: Backend Software Engineer (05/21-06/21)
+- Acquired hands-on experience in database management, including design, optimization, and query execution.
+
+Semicolon Academy: Cybersecurity Bootcamp (03/24-04/24)
+- Mastered Burp Suite for web application assessment, proficiently executing web server requests, and identifying vulnerabilities.
+
+Integrated Digital Systems: Full Stack Web Development (05/24-07/24)
+- Completed a full-stack project using PHP, including both front-end and back-end development, and gained experience in creating dynamic web applications.`
+        );
+      }
+
+      if (!localStorage.getItem('projects')) {
+        localStorage.setItem(
+          'projects',
+          `Image Enhancement:
+- Enhanced images by applying Median and Sobel filters, utilizing parallel programming for computational efficiency.
+
+LAU Medical Center App:
+- Developed a mobile application to enhance healthcare accessibility with front-end implementation and engineering diagrams.
+
+Phishing Link Detection:
+- Implemented a program to identify and mitigate phishing links, showcasing expertise in cybersecurity.
+
+Activity Club Website:
+- Created a dynamic site with an admin panel for user and event management using full-stack web development skills.
+
+Fashion Marketplace:
+- Developed a platform for buying/selling clothes, featuring an admin panel and secure payment system.`
+        );
+      }
+    }
+
+    // Call the initialization function
+    initializeLocalStorage();
+
     // Load data from localStorage and render with line breaks
-    document.getElementById('education').innerHTML = (localStorage.getItem('education') || 'No education details available.').replace(/\n/g, '<br>');
-    document.getElementById('experience').innerHTML = (localStorage.getItem('experience') || 'No experience details available.').replace(/\n/g, '<br>');
-    document.getElementById('projects').innerHTML = (localStorage.getItem('projects') || 'No project details available.').replace(/\n/g, '<br>');
+    document.getElementById('education').innerHTML = localStorage
+      .getItem('education')
+      .replace(/\n/g, '<br>');
+    document.getElementById('experience').innerHTML = localStorage
+      .getItem('experience')
+      .replace(/\n/g, '<br>');
+    document.getElementById('projects').innerHTML = localStorage
+      .getItem('projects')
+      .replace(/\n/g, '<br>');
   </script>
 </body>
 </html>
-
