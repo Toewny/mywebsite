@@ -25,10 +25,6 @@
       color: white;
       padding: 20px 0;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .exit-button {
@@ -41,8 +37,6 @@
       padding: 10px 15px;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 0.9rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .exit-button:hover {
@@ -88,43 +82,21 @@
 
   <div class="container">
     <h2>Education</h2>
-    <p><strong>Lebanese American University</strong><br>BS in Computer Science, 2021 – 2025</p>
-    <p>Specialization courses focused on algorithms, data structures, programming languages, software development, and computer systems.</p>
+    <p id="education"></p>
 
     <h2>Experience</h2>
-    <ul>
-      <li>
-        <strong>Netvariant</strong> - Backend Software Engineer (05/21-06/21)<br>
-        Acquired hands-on experience in database management, including design, optimization, and query execution.
-      </li>
-      <li>
-        <strong>Semicolon Academy</strong> - Cybersecurity Bootcamp (03/24-04/24)<br>
-        Mastered Burp Suite for web application assessment, proficiently executing web server requests, and identifying vulnerabilities.
-      </li>
-      <li>
-        <strong>Integrated Digital Systems</strong> - Full Stack Web Development (05/24-07/24)<br>
-        Completed a full-stack project using PHP, including both front-end and back-end development, and gained experience in creating dynamic web applications.
-      </li>
-    </ul>
+    <p id="experience"></p>
 
     <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Image Enhancement:</strong> Enhanced images by applying Median and Sobel filters, utilizing parallel programming for efficiency.
-      </li>
-      <li>
-        <strong>LAU Medical Center App:</strong> Developed a mobile application to enhance healthcare accessibility with front-end implementation and engineering diagrams.
-      </li>
-      <li>
-        <strong>Phishing Link Detection:</strong> Implemented a program to identify and mitigate phishing links, showcasing expertise in cybersecurity.
-      </li>
-      <li>
-        <strong>Activity Club Website:</strong> Created a dynamic site with admin panel for user and event management using full-stack web development skills.
-      </li>
-      <li>
-        <strong>Fashion Marketplace:</strong> Developed a platform for buying/selling clothes, featuring an admin panel and secure payment system.
-      </li>
-    </ul>
+    <p id="projects"></p>
   </div>
+
+  <script>
+    // Load data from localStorage and display it
+    document.getElementById('education').innerText = localStorage.getItem('education') || 'No education details available.';
+    document.getElementById('experience').innerText = localStorage.getItem('experience') || 'No experience details available.';
+    document.getElementById('projects').innerText = localStorage.getItem('projects') || 'No projects details available.';
+  </script>
 </body>
 </html>
+
