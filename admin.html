@@ -96,25 +96,46 @@
 
   <div class="container">
     <form id="adminForm">
+      <!-- Education Section -->
       <label for="education">Education</label>
-      <textarea id="education" rows="4">Lebanese American University - BS in Computer Science, 2021 – 2025</textarea>
+      <textarea id="education" rows="6">
+Lebanese American University - BS in Computer Science, 2021 – 2025
+Specialization courses focused on algorithms, data structures, programming languages, software development, and computer systems.
+      </textarea>
 
+      <!-- Experience Section -->
       <label for="experience">Experience</label>
-      <textarea id="experience" rows="6">
+      <textarea id="experience" rows="10">
 Netvariant: Backend Software Engineer (05/21-06/21)
+- Acquired hands-on experience in database management, including design, optimization, and query execution.
+
 Semicolon Academy: Cybersecurity Bootcamp (03/24-04/24)
+- Mastered Burp Suite for web application assessment, proficiently executing web server requests, and identifying vulnerabilities.
+
 Integrated Digital Systems: Full Stack Web Development (05/24-07/24)
+- Completed a full-stack project using PHP, including both front-end and back-end development, and gained experience in creating dynamic web applications.
       </textarea>
 
+      <!-- Projects Section -->
       <label for="projects">Projects</label>
-      <textarea id="projects" rows="6">
-Image Enhancement Using Median and Sobel Filters
-LAU Medical Center App
-Phishing Link Detection
-Activity Club Website
-Fashion Marketplace
+      <textarea id="projects" rows="12">
+Image Enhancement:
+- Enhanced images by applying Median and Sobel filters, utilizing parallel programming for computational efficiency.
+
+LAU Medical Center App:
+- Developed a mobile application to enhance healthcare accessibility with front-end implementation and engineering diagrams.
+
+Phishing Link Detection:
+- Implemented a program to identify and mitigate phishing links, showcasing expertise in cybersecurity.
+
+Activity Club Website:
+- Created a dynamic site with an admin panel for user and event management using full-stack web development skills.
+
+Fashion Marketplace:
+- Developed a platform for buying/selling clothes, featuring an admin panel and secure payment system.
       </textarea>
 
+      <!-- Save Button -->
       <button type="button" onclick="saveChanges()">Save Changes</button>
     </form>
   </div>
@@ -122,8 +143,9 @@ Fashion Marketplace
   <script>
     function saveChanges() {
       alert('Changes saved successfully!');
-      // You can extend this to store data in a backend or localStorage.
+      // In a real application, this is where you would store the updated data.
     }
   </script>
 </body>
 </html>
+
