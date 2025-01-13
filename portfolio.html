@@ -58,19 +58,6 @@
       border-bottom: 2px solid #007bff;
       margin-bottom: 15px;
     }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      margin: 10px 0;
-      padding: 10px;
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
   </style>
 </head>
 <body>
@@ -91,13 +78,12 @@
     <p id="projects"></p>
   </div>
 
-<script>
-  // Load data from localStorage and display it
-  document.getElementById('education').innerText = localStorage.getItem('education') || 'No education details available.';
-  document.getElementById('experience').innerText = localStorage.getItem('experience') || 'No experience details available.';
-  document.getElementById('projects').innerText = localStorage.getItem('projects') || 'No project details available.';
-</script>
-
+  <script>
+    // Load data from localStorage and render with line breaks
+    document.getElementById('education').innerHTML = (localStorage.getItem('education') || 'No education details available.').replace(/\n/g, '<br>');
+    document.getElementById('experience').innerHTML = (localStorage.getItem('experience') || 'No experience details available.').replace(/\n/g, '<br>');
+    document.getElementById('projects').innerHTML = (localStorage.getItem('projects') || 'No project details available.').replace(/\n/g, '<br>');
+  </script>
 </body>
 </html>
 
