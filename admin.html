@@ -11,7 +11,6 @@
       padding: 0;
       background: #f4f4f4;
       line-height: 1.6;
-      opacity: 0;
       animation: fadeIn 2s ease-in forwards;
     }
 
@@ -28,7 +27,6 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .exit-button {
@@ -41,8 +39,6 @@
       padding: 10px 15px;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 0.9rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .exit-button:hover {
@@ -140,19 +136,25 @@ Fashion Marketplace:
   <script>
     // Function to save data to localStorage
     function saveChanges() {
-      const education = document.getElementById('education').value;
-      const experience = document.getElementById('experience').value;
-      const projects = document.getElementById('projects').value;
+      try {
+        const education = document.getElementById('education').value.trim();
+        const experience = document.getElementById('experience').value.trim();
+        const projects = document.getElementById('projects').value.trim();
 
-      // Save data to localStorage
-      localStorage.setItem('education', education);
-      localStorage.setItem('experience', experience);
-      localStorage.setItem('projects', projects);
+        // Save data to localStorage
+        localStorage.setItem('education', education);
+        localStorage.setItem('experience', experience);
+        localStorage.setItem('projects', projects);
 
-      alert('Changes saved successfully!');
+        alert('Changes saved successfully!');
+      } catch (error) {
+        console.error('Error saving changes:', error);
+        alert('Failed to save changes. Check the console for details.');
+      }
     }
   </script>
 </body>
 </html>
+
 
 
