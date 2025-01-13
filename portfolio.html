@@ -31,6 +31,24 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
+    .exit-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .exit-button:hover {
+      background-color: #d90429;
+    }
+
     .container {
       width: 90%;
       max-width: 800px;
@@ -50,7 +68,6 @@
     ul {
       list-style: none;
       padding: 0;
-      animation: slideIn 1s ease-in-out;
     }
 
     ul li {
@@ -59,47 +76,54 @@
       background: #f9f9f9;
       border: 1px solid #ddd;
       border-radius: 5px;
-      transform: translateX(-50%);
-      opacity: 0;
-      animation: fadeInSlide 0.5s ease forwards;
-    }
-
-    @keyframes fadeInSlide {
-      from {
-        opacity: 0;
-        transform: translateX(-50%);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
     }
   </style>
 </head>
 <body>
   <header>
+    <button class="exit-button" onclick="window.location.href='index.html';">Exit</button>
     <h1>Tony AbiAad</h1>
     <p>+961 79 315 914 | Tonyrachabiaad@gmail.com</p>
   </header>
 
   <div class="container">
     <h2>Education</h2>
-    <p>Lebanese American University - BS in Computer Science, 2021 – 2025</p>
+    <p><strong>Lebanese American University</strong><br>BS in Computer Science, 2021 – 2025</p>
+    <p>Specialization courses focused on algorithms, data structures, programming languages, software development, and computer systems.</p>
 
     <h2>Experience</h2>
     <ul>
-      <li><strong>Netvariant</strong>: Backend Software Engineer (05/21-06/21)</li>
-      <li><strong>Semicolon Academy</strong>: Cybersecurity Bootcamp (03/24-04/24)</li>
-      <li><strong>Integrated Digital Systems</strong>: Full Stack Web Development (05/24-07/24)</li>
+      <li>
+        <strong>Netvariant</strong> - Backend Software Engineer (05/21-06/21)<br>
+        Acquired hands-on experience in database management, including design, optimization, and query execution.
+      </li>
+      <li>
+        <strong>Semicolon Academy</strong> - Cybersecurity Bootcamp (03/24-04/24)<br>
+        Mastered Burp Suite for web application assessment, proficiently executing web server requests, and identifying vulnerabilities.
+      </li>
+      <li>
+        <strong>Integrated Digital Systems</strong> - Full Stack Web Development (05/24-07/24)<br>
+        Completed a full-stack project using PHP, including both front-end and back-end development, and gained experience in creating dynamic web applications.
+      </li>
     </ul>
 
     <h2>Projects</h2>
     <ul>
-      <li>Image Enhancement Using Median and Sobel Filters</li>
-      <li>LAU Medical Center App</li>
-      <li>Phishing Link Detection</li>
-      <li>Activity Club Website</li>
-      <li>Fashion Marketplace</li>
+      <li>
+        <strong>Image Enhancement:</strong> Enhanced images by applying Median and Sobel filters, utilizing parallel programming for efficiency.
+      </li>
+      <li>
+        <strong>LAU Medical Center App:</strong> Developed a mobile application to enhance healthcare accessibility with front-end implementation and engineering diagrams.
+      </li>
+      <li>
+        <strong>Phishing Link Detection:</strong> Implemented a program to identify and mitigate phishing links, showcasing expertise in cybersecurity.
+      </li>
+      <li>
+        <strong>Activity Club Website:</strong> Created a dynamic site with admin panel for user and event management using full-stack web development skills.
+      </li>
+      <li>
+        <strong>Fashion Marketplace:</strong> Developed a platform for buying/selling clothes, featuring an admin panel and secure payment system.
+      </li>
     </ul>
   </div>
 </body>
